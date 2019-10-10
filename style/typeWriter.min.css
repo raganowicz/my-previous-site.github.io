@@ -1,0 +1,1 @@
+.typewrite{margin:50px;color:white;text-transform:uppercase;position:relative;width:100%}.typewrite div{display:inline-block;height:5px;border-right:20px solid rgba(255,255,255,0.836);animation:caret 1s steps(1) infinite;padding-left:3px}@keyframes caret{50%{border-color:transparent}}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Piotr Raganowicz-Macina portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="style/typeWriter.css" />
+    <link rel="stylesheet" type="text/css" href="style/toggler.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="nav">
+      <nav class="navbar  navbar-expand-lg navbar-dark  ">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">HOME </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">ABOUT_ME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- First section - #home -->
+    <div id="home" class="section">
+      <video autoplay muted onended="playMovie()" id="myVideo">
+        <source src="video/video1.mp4" type="video/mp4" />
+      </video>
+      <h1 class="typewrite">
+        Hello, I'm Piotr. I love design and programming.
+      </h1>
+      <div class="text-wr"></div>
+    </div>
+    <!-- Second section - #aboutme -->
+    <div id="about" class="section">
+      <div id="accordion">
+        <!-- Personal info -->
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-text="# WHO AM I?"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                # ABOUT ME
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <pre>
+              const ME = {
+                  name: 'Piotr Raganowicz-Macina',
+                  type: 'Begginer Designer&Front-End Developer',
+                  location: 'Krakow',
+              };
+              /*
+              At the beggining of 2019 I decided to start learning programming. Fastly I got hooked
+              on coding, discovered how many opportunities it opens. I'm treating code like an art,
+              I can share with others. I'm still learning and willing to explore new technologies.
+              I'm creative, open-minded and determined to do whatever it is I'm doing.
+              Looking for first full-time job, which would create new challanges, and help me grow 
+              with experienced specialists.
+              */ </pre
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Skills list-->
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                data-text="# WHAT I CAN AND STILL LEARN"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                # MY SKILLS
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse"
+            aria-labelledby="headingTwo"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <pre>
+              const SKILLS = {
+                  languages: ['JavaScript','HTML','CSS','SASS/SCSS'],
+                  frameworks:['VanillaJS', 'React'],
+                  libraries: ['jQuery','Bootstrap','npm'],
+                  tools: ['Github','Postman']
+                  //back-end: C# and SQL basics
+              };
+              /*I don't use progress bars because they're too subiective and can't really 
+              tell anything about my skills. Ironically, the more I know, the more things 
+              I'm aware I have to learn. I still train skills I placed on list. I would 
+              be complementing list with new abilities. 
+              */
+              </pre>
+            </div>
+          </div>
+        </div>
+        <!-- Hobbies list-->
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                data-text="# THINGS I LOVE DOING"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                # MY PASSIONS
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <pre>
+                const HOBBIES = [programming, art(generative, audiovisual, performance),
+                                 theatre, living history,indie games, pixel art, 
+                                 music(especially acoustic),football(especially English), 
+                                 Harry Potter, LEGO!]
+                                
+           </pre
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Picture of myself-->
+      <div id="portrait"></div>
+      <div class="text-wr"></div>
+    </div>
+    <!-- Projects-->
+    <div id="projects" class="section">
+      <div class="text-wr">
+        <h1 class="title">Section 3</h1>
+        <div class="glitch" data-text="GLITCH">GLITCH</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor.
+        </p>
+      </div>
+    </div>
+    <!-- Contact-->
+    <div id="contact" class="section">
+      <div class="text-wr">
+        <h1 class="title">Section 4</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor.
+        </p>
+      </div>
+    </div>
+    <!-- Scripts-->
+    <script src="components/videoController.js" type="text/javascript"></script>
+    <script src="components/typer.js" type="text/javascript"></script>
+    <script src="dist/slideNav.js" type="text/javascript"></script>
+    <script>
+      window.slide = new SlideNav({
+        changeHash: true
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
