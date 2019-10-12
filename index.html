@@ -78,14 +78,14 @@
 
           <div
             id="collapseOne"
-            class="collapse show"
+            class="collapse"
             aria-labelledby="headingOne"
             data-parent="#accordion"
           >
             <div class="card-body">
               <pre>
-                <pre class = "focus">
-              const ME = {
+                <pre class = "focus"><span class="yellow-const">
+            const</span> ME = {
                   name: 'Piotr Raganowicz-Macina',
                   type: 'Begginer Designer&Front-End Developer',
                   location: 'Krakow',
@@ -126,13 +126,15 @@
           >
             <div class="card-body">
               <pre>
-              const SKILLS = {
+                  <pre class = "focus"><span class="yellow-const">
+            const</span> SKILLS = {
                   languages: ['JavaScript','HTML','CSS','SASS/SCSS'],
                   frameworks:['VanillaJS', 'React'],
                   libraries: ['jQuery','Bootstrap','npm'],
                   tools: ['Github','Postman']
                   //back-end: C# and SQL basics
               };
+              </pre>
               /*I don't use progress bars because they're too subiective and can't really 
               tell anything about my skills. Ironically, the more I know, the more things 
               I'm aware I have to learn. I still train skills I placed on list. I would 
@@ -165,14 +167,13 @@
             data-parent="#accordion"
           >
             <div class="card-body">
-              <pre>
-                const HOBBIES = [programming, art(generative, audiovisual, performance),
-                                 theatre, living history,indie games, pixel art, 
-                                 music(especially acoustic),football(especially English), 
-                                 Harry Potter, LEGO!]
-                                
-           </pre
-              >
+              <pre><pre class = "focus"><span class="yellow-const">
+            const</span> HOBBIES = [programming, art(generative, 
+                  audiovisual, performance),theatre, living history,
+                  indie games, pixel art, music(especially acoustic),
+                  football(especially English),Harry Potter, LEGO!]
+            </pre>                    
+           </pre>
             </div>
           </div>
         </div>
@@ -183,24 +184,15 @@
     </div>
     <!-- Projects-->
     <div id="projects" class="section">
-      <div class="text-wr">
-        <h1 class="title">Section 3</h1>
-        <div class="glitch" data-text="GLITCH">GLITCH</div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor.
-        </p>
-      </div>
+      <div class="project n1"></div>
+      <div class="project n2"></div>
+      <div class="project n3"></div>
+      <div class="project n4"></div>
+      <div class="text-wr"></div>
     </div>
     <!-- Contact-->
     <div id="contact" class="section">
-      <div class="text-wr">
-        <h1 class="title">Section 4</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor.
-        </p>
-      </div>
+      <div class="text-wr"></div>
     </div>
     <!-- Scripts-->
     <script src="components/videoController.js" type="text/javascript"></script>
