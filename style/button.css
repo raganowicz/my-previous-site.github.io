@@ -1,0 +1,47 @@
+.info button {
+  position: relative;
+  padding: 1em 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin: 1em 0.8em;
+  color: white;
+}
+
+.info button::after,
+.info button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+
+.info button::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: yellow;
+  border-right-color: yellow;
+}
+
+.info button::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: yellow;
+  border-left-color: yellow;
+}
+
+.info button:hover:after,
+.info button:hover:before {
+  width: 100%;
+  height: 100%;
+}

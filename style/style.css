@@ -111,13 +111,66 @@ pre {
 }
 
 #projects .project {
-  background-color: red;
-  border: 1px solid black;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 1s;
+}
+
+#projects .project button {
+  display: block;
   width: 100%;
 }
 
-#projects .project:hover {
-  background-color: royalblue;
+#projects .project .info {
+  display: none;
+}
+
+#projects .project::after {
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.74);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+#projects .project:hover:after {
+  opacity: 1;
+  background-size: 150%;
+}
+
+#projects .project:hover .info {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+#projects .n1 {
+  background-image: url("../images/proj1.jpg");
+  background-position: center top;
+}
+
+#projects .n2 {
+  background-image: url("../images/proj2.jpg");
+}
+
+#projects .n3 {
+  background-image: url("../images/proj3.jpg");
+  background-position: center bottom;
+}
+
+#projects .n4 {
+  background-image: url("../images/proj4.jpg");
 }
 
 #contact {
