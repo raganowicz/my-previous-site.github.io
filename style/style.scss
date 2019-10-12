@@ -3,17 +3,17 @@ $main-black: rgb(0, 0, 0);
 $main-white: rgb(255, 255, 255);
 $yellow-color: rgb(255, 255, 0);
 @mixin for-link-after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    display: block;
-    margin-top: 2px;
-    right: 0;
-    background: $yellow-color;
-    transition: width 0.2s ease;
-    -webkit-transition: width 0.2s ease;
-  }
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 2px;
+  right: 0;
+  background: $yellow-color;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+}
 /* For mobile phones: */
 body::-webkit-scrollbar {
   width: 5px;
@@ -111,13 +111,69 @@ pre {
   background: $main-black;
   display: flex;
   position: relative;
-  .project{
-    background-color: red;
-    border:1px solid black;
+  .project {
     width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 1s;
+    button {
+      display: block;
+      width:100% ;
+    }
+    .info {
+      display: none;
+    }
   }
-  .project:hover{
-    background-color: royalblue;
+  .project::after{
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background:rgba(0, 0, 0, 0.74);
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+  }
+  .project:hover:after{
+    opacity: 1;
+    background-size: 150%;
+}
+  // .project:hover::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   display: block;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  // }
+  .project:hover .info {
+    display: block;
+
+    position: relative;
+    z-index: 5;
+  }
+  .n1 {
+    background-image: url("../images/proj1.jpg");
+    background-position: center top;
+  }
+  .n2 {
+    background-image: url("../images/proj2.jpg");
+  }
+  .n3 {
+    background-image: url("../images/proj3.jpg");
+    background-position: center bottom;
+  }
+  .n4 {
+    background-image: url("../images/proj4.jpg");
   }
 }
 #contact {
@@ -156,7 +212,6 @@ pre {
 }
 
 @media only screen and (min-width: 992px) {
-  
   .navbar {
     a {
       font-size: 15px !important;
