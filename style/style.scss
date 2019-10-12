@@ -2,7 +2,18 @@
 $main-black: rgb(0, 0, 0);
 $main-white: rgb(255, 255, 255);
 $yellow-color: rgb(255, 255, 0);
-
+@mixin for-link-after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: $yellow-color;
+    transition: width 0.2s ease;
+    -webkit-transition: width 0.2s ease;
+  }
 /* For mobile phones: */
 body::-webkit-scrollbar {
   width: 5px;
@@ -25,7 +36,8 @@ html {
     min-height: 800px;
     position: relative;
     margin: 0;
-    h1{
+    color: $main-white;
+    h1 {
       font-family: "tradegothiclt-bold", sans-serif;
       font-weight: bold;
       font-size: 40px;
@@ -43,6 +55,7 @@ html {
   }
 }
 
+// section I
 #home {
   background-attachment: fixed;
   background-position: center;
@@ -61,6 +74,17 @@ html {
     min-height: 100%;
   }
 }
+pre {
+  margin: 0;
+}
+.focus {
+  font-size: 20px !important;
+  .yellow-const {
+    color: $yellow-color !important;
+  }
+}
+
+//section II
 #about {
   background: $main-black;
   color: $main-white;
@@ -82,9 +106,19 @@ html {
   background-size: cover;
 }
 
+//section III
 #projects {
-  background: #283044;
-  color: #686e7c;
+  background: $main-black;
+  display: flex;
+  position: relative;
+  .project{
+    background-color: red;
+    border:1px solid black;
+    width: 100%;
+  }
+  .project:hover{
+    background-color: royalblue;
+  }
 }
 #contact {
   background: #ebf5ee;
@@ -101,7 +135,7 @@ html {
       text-decoration: none;
       position: relative;
       font-family: "Montserrat", sans-serif;
-      font-size: 15px;
+      font-size: 25px;
       display: inline-block;
       margin: 0px 15px;
       color: #fff !important;
@@ -110,6 +144,7 @@ html {
   .navbar-toggler {
     border: 0px !important;
     outline: none !important;
+    font-size: 3em;
   }
 }
 
@@ -121,17 +156,11 @@ html {
 }
 
 @media only screen and (min-width: 992px) {
-  @mixin for-link-after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    display: block;
-    margin-top: 2px;
-    right: 0;
-    background: $yellow-color;
-    transition: width 0.2s ease;
-    -webkit-transition: width 0.2s ease;
+  
+  .navbar {
+    a {
+      font-size: 15px !important;
+    }
   }
   .nav a::after {
     @include for-link-after;

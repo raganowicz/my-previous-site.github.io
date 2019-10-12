@@ -27,6 +27,7 @@ html .section {
   min-height: 800px;
   position: relative;
   margin: 0;
+  color: white;
 }
 
 body .section h1,
@@ -68,6 +69,18 @@ html .section .text-wr {
   min-height: 100%;
 }
 
+pre {
+  margin: 0;
+}
+
+.focus {
+  font-size: 20px !important;
+}
+
+.focus .yellow-const {
+  color: yellow !important;
+}
+
 #about {
   background: black;
   color: white;
@@ -92,8 +105,19 @@ html .section .text-wr {
 }
 
 #projects {
-  background: #283044;
-  color: #686e7c;
+  background: black;
+  display: flex;
+  position: relative;
+}
+
+#projects .project {
+  background-color: red;
+  border: 1px solid black;
+  width: 100%;
+}
+
+#projects .project:hover {
+  background-color: royalblue;
 }
 
 #contact {
@@ -115,7 +139,7 @@ html .section .text-wr {
   text-decoration: none;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-size: 25px;
   display: inline-block;
   margin: 0px 15px;
   color: #fff !important;
@@ -124,6 +148,7 @@ html .section .text-wr {
 .nav .navbar-toggler {
   border: 0px !important;
   outline: none !important;
+  font-size: 3em;
 }
 
 @media only screen and (min-width: 600px) {
@@ -134,6 +159,9 @@ html .section .text-wr {
 }
 
 @media only screen and (min-width: 992px) {
+  .navbar a {
+    font-size: 15px !important;
+  }
   .nav a::after {
     content: "";
     position: absolute;

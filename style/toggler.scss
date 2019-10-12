@@ -1,5 +1,4 @@
 #accordion {
- 
   background-color: black !important;
   * {
     background-color: black;
@@ -10,15 +9,17 @@
     .btn-link:focus {
       text-decoration: none;
     }
+    .card-body{
+      padding: 0 20px 0 20px;
+    }
   }
 }
 .btn {
     width:100%;
-  
     font-family: "tradegothiclt-bold", sans-serif;
     font-weight: bold;
     font-size: 40px;
-    text-align: left;
+    text-align: right;
 }
 
 .btn:hover {
@@ -42,7 +43,7 @@
   .btn:hover::after {
     animation-name: glitch-animation;
     animation-duration: 4s;
-    left: 4px;
+    right: 4px;
     text-shadow: -1px 0 #ffa800;
     background: black;
   }
@@ -50,7 +51,7 @@
   .btn:hover::before {
     animation-name: glitch-animation-2;
     animation-duration: 6s;
-    left: -4px;
+    right: -4px;
     text-shadow: 1px 0 #00d8ff;
     background: black;
   }
