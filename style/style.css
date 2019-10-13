@@ -190,6 +190,17 @@ pre {
 #contact {
   background: black;
   color: #aeb9b9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form label {
+  display: block;
+}
+
+label input, textarea {
+  display: block;
 }
 
 .nav {

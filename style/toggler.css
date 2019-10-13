@@ -16,8 +16,11 @@
   padding: 0 20px 0 20px;
 }
 
+h2 {
+  text-align: right;
+}
+
 .btn {
-  width: 100%;
   font-family: "tradegothiclt-bold", sans-serif;
   font-weight: bold;
   font-size: 40px;
@@ -25,6 +28,7 @@
 }
 
 .btn:hover {
+  width: 100%;
   position: relative;
   margin: 0 auto;
   background: black;

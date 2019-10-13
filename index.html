@@ -217,12 +217,26 @@
     </div>
     <!-- Fourth section #contact-->
     <div id="contact" class="section">
+      <h1>Contact me</h1>
+      <form action='https://formspree.io/piotr.rm95@gmail.com' method="POST">
+        <label>
+          E-mail
+          <input type="email" name="email" class="email">
+        </label>
+        <label>
+          Message
+          <textarea class="message" name="message"></textarea>
+        </label>
+        <div class="status"></div>
+        <button class="submit" type="submit">Send</button>
+      </form>
       <div class="text-wr"></div>
     </div>
     <!-- Scripts-->
     <script src="components/videoController.js" type="text/javascript"></script>
     <script src="components/typer.js" type="text/javascript"></script>
-    <script src="components/projects.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="components/contact.js" type="text/javascript"></script>
     <script src="dist/slideNav.js" type="text/javascript"></script>
     <script>
       window.slide = new SlideNav({
