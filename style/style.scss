@@ -17,7 +17,7 @@ $yellow-color: rgb(255, 255, 0);
   -webkit-transition: width 0.2s ease;
 }
 
-/*Edition of scrollbar (Chrome)*/
+/*Scrollbar (Chrome)*/
 
 body::-webkit-scrollbar {
   width: 5px;
@@ -28,6 +28,29 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: $main-white;
   border-radius: 3px;
+}
+/*Navigation*/
+.nav {
+  position: fixed;
+  z-index: 9;
+  .navbar {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
+    a {
+      text-decoration: none;
+      position: relative;
+      font-family: "Montserrat", sans-serif;
+      font-size: 45px;
+      display: inline-block;
+      margin: 0px 15px;
+      color: #fff !important;
+    }
+  }
+  .navbar-toggler {
+    border: 0px !important;
+    outline: none !important;
+    font-size: 3em;
+  }
 }
 
 /* For mobile phones: */
@@ -40,7 +63,7 @@ html {
   .section {
     font-family: sans-serif, arial;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100%;
     max-height: 100%;
     position: relative;
@@ -49,22 +72,11 @@ html {
     h1 {
       font-family: "tradegothiclt-bold", sans-serif;
       font-weight: bold;
-      font-size: 40px;
-    }
-    .text-wr {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      font-size: 100px;
     }
   }
 }
-
-// section I
+/*section I*/
 #home {
   background-attachment: fixed;
   background-position: center;
@@ -93,18 +105,33 @@ pre {
   }
 }
 
-//section II
+/*section II*/
 #about {
   background: $main-black;
   color: $main-white;
   display: grid;
-  max-height: 800px;
   grid-template-columns: 140px auto;
   grid-template-rows: auto;
   grid-template-areas: ". accordion";
 }
 #accordion {
   grid-area: accordion;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  button {
+    font-size: 100px;
+  }
+}
+pre {
+  margin: 0;
+  font-size: 15px;
+}
+.focus {
+  font-size: 20px !important;
+  .yellow-const {
+    color: $yellow-color !important;
+  }
 }
 #portrait {
   display: none;
@@ -117,16 +144,14 @@ pre {
 
 //section III
 #projects {
-  background: $main-black;
+  height: 100vh;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 50vh 50vh;
   grid-template-areas:
     "n1 n2"
     "n3 n4";
-
   .project {
-    width: 100%;
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -163,7 +188,7 @@ pre {
     .title {
       font-family: tradegothiclt-bold, sans-serif;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 70px;
       margin-bottom: 20px;
     }
     display: block;
@@ -191,41 +216,41 @@ pre {
   }
 }
 #contact {
+  min-height: 100vh;
   background: $main-black;
-  color: #aeb9b9;
+  color: $main-white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 form label {
   display: block;
 }
-label input,
-textarea {
-  display: block;
+label {
+  input,
+  textarea {
+    font-size: 50px;
+    background-color: $main-black;
+    display: block;
+    width: 80vw;
+    color: $main-white;
+    border-bottom: 2px solid $yellow-color;
+  }
+  input{
+    height: 5vh;
+  }
+  textarea{
+    height: 30vh;
+    
+  }
 }
-
-.nav {
-  position: fixed;
-  z-index: 9;
-  .navbar {
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0);
-    a {
-      text-decoration: none;
-      position: relative;
-      font-family: "Montserrat", sans-serif;
-      font-size: 25px;
-      display: inline-block;
-      margin: 0px 15px;
-      color: #fff !important;
-    }
-  }
-  .navbar-toggler {
-    border: 0px !important;
-    outline: none !important;
-    font-size: 3em;
-  }
+.submit{
+  width: 100%;
+  height: 5vh;
+}
+footer {
+  display: block;
 }
 
 @media only screen and (min-width: 600px) {
@@ -266,8 +291,15 @@ textarea {
   }
   #about {
     grid-template-columns: 470px auto 200px;
-    grid-template-rows: auto;
+    grid-template-rows: 100vh;
     grid-template-areas: ". accordion portrait";
+  }
+
+  #accordion {
+    grid-area: accordion;
+    button {
+      font-size: 40px;
+    }
   }
   #projects {
     background: $main-black;

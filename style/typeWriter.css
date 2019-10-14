@@ -8,8 +8,8 @@
 
 .typewrite div {
   display: inline-block;
-  height: 5px;
-  border-right: 20px solid rgba(255, 255, 255, 0.836);
+  height: 10px;
+  border-right: 50px solid rgba(255, 255, 255, 0.836);
   animation: caret 1s steps(1) infinite;
   padding-left: 3px;
 }
