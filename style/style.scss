@@ -2,6 +2,8 @@
 $main-black: rgb(0, 0, 0);
 $main-white: rgb(255, 255, 255);
 $yellow-color: rgb(255, 255, 0);
+
+/*underline nav element*/
 @mixin for-link-after {
   content: "";
   position: absolute;
@@ -14,7 +16,9 @@ $yellow-color: rgb(255, 255, 0);
   transition: width 0.2s ease;
   -webkit-transition: width 0.2s ease;
 }
-/* For mobile phones: */
+
+/*Edition of scrollbar (Chrome)*/
+
 body::-webkit-scrollbar {
   width: 5px;
 }
@@ -25,15 +29,20 @@ body::-webkit-scrollbar-thumb {
   background-color: $main-white;
   border-radius: 3px;
 }
+
+/* For mobile phones: */
 body,
 html {
   margin: 0;
   padding: 0;
   background-color: $main-black;
+
   .section {
     font-family: sans-serif, arial;
-    width: 100%;
-    min-height: 800px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
     position: relative;
     margin: 0;
     color: $main-white;
@@ -44,7 +53,7 @@ html {
     }
     .text-wr {
       position: absolute;
-      top: 50%;
+      top: 0;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
@@ -187,13 +196,13 @@ pre {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-form label{
+form label {
   display: block;
 }
-label input,textarea{
-display: block;
+label input,
+textarea {
+  display: block;
 }
 
 .nav {
@@ -256,7 +265,7 @@ display: block;
     display: block;
   }
   #about {
-    grid-template-columns: 470px auto 15%;
+    grid-template-columns: 470px auto 200px;
     grid-template-rows: auto;
     grid-template-areas: ". accordion portrait";
   }
@@ -265,7 +274,6 @@ display: block;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 100%;
-    grid-template-areas:
-      "n1 n2 n3 n4";
+    grid-template-areas: "n1 n2 n3 n4";
   }
 }

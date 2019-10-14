@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-/* For mobile phones: */
+/*underline nav element*/
+/*Edition of scrollbar (Chrome)*/
 body::-webkit-scrollbar {
   width: 5px;
 }
@@ -13,6 +14,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 3px;
 }
 
+/* For mobile phones: */
 body,
 html {
   margin: 0;
@@ -23,8 +25,10 @@ html {
 body .section,
 html .section {
   font-family: sans-serif, arial;
-  width: 100%;
-  min-height: 800px;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   position: relative;
   margin: 0;
   color: white;
@@ -40,7 +44,7 @@ html .section h1 {
 body .section .text-wr,
 html .section .text-wr {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -199,7 +203,8 @@ form label {
   display: block;
 }
 
-label input, textarea {
+label input,
+textarea {
   display: block;
 }
 
@@ -273,7 +278,7 @@ label input, textarea {
     display: block;
   }
   #about {
-    grid-template-columns: 470px auto 15%;
+    grid-template-columns: 470px auto 200px;
     grid-template-rows: auto;
     grid-template-areas: ". accordion portrait";
   }

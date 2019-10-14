@@ -123,7 +123,7 @@ var SlideNav = function () {
 					    offset = this.scrollDoc.scrollTop,
 					    scrollHeight = this.scrollDoc.scrollHeight;
 
-					if (section && (section.offsetTop <= offset && section.offsetTop + section.offsetHeight > offset || offset + window.innerHeight == scrollHeight)) {
+					if (section && (section.offsetTop <= Math.round(offset) && section.offsetTop + section.offsetHeight >Math.round(offset)|| Math.ceil((offset + window.innerHeight)/100)*100  ==  Math.ceil((scrollHeight)/100)*100))  {
 						var _iteratorNormalCompletion3 = true;
 						var _didIteratorError3 = false;
 						var _iteratorError3 = undefined;
