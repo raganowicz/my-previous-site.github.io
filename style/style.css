@@ -29,7 +29,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-size: 45px;
+  font-size: 55px;
   display: inline-block;
   margin: 0px 15px;
   color: #fff !important;
@@ -38,7 +38,11 @@ body::-webkit-scrollbar-thumb {
 .nav .navbar-toggler {
   border: 0px !important;
   outline: none !important;
-  font-size: 3em;
+}
+
+.nav .fas {
+  color: white !important;
+  font-size: 5.5em;
 }
 
 /* For mobile phones: */
@@ -46,6 +50,8 @@ body,
 html {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  max-height: 100%;
   background-color: black;
 }
 
@@ -53,9 +59,7 @@ body .section,
 html .section {
   font-family: sans-serif, arial;
   width: 100vw;
-  min-height: 100vh;
-  max-width: 100%;
-  max-height: 100%;
+  height: 100vh;
   position: relative;
   margin: 0;
   color: white;
@@ -89,25 +93,13 @@ html .section h1 {
   min-height: 100%;
 }
 
-pre {
-  margin: 0;
-}
-
-.focus {
-  font-size: 20px !important;
-}
-
-.focus .yellow-const {
-  color: yellow !important;
-}
-
 /*section II*/
 #about {
   background: black;
   color: white;
   display: grid;
-  grid-template-columns: 140px auto;
-  grid-template-rows: auto;
+  grid-template-columns: 140px calc(100vw-140px);
+  grid-template-rows: 100vh;
   grid-template-areas: ". accordion";
 }
 
@@ -122,13 +114,9 @@ pre {
   font-size: 100px;
 }
 
-pre {
-  margin: 0;
-  font-size: 15px;
-}
-
 .focus {
-  font-size: 20px !important;
+  margin: 0;
+  font-size: 45px;
 }
 
 .focus .yellow-const {
@@ -145,7 +133,6 @@ pre {
 }
 
 #projects {
-  height: 100vh;
   display: grid;
   grid-template-columns: 50vw 50vw;
   grid-template-rows: 50vh 50vh;
@@ -227,13 +214,23 @@ pre {
 }
 
 #contact {
-  min-height: 100vh;
-  background: black;
+  background: linear-gradient(to bottom right, black 0%, black 50%, transparent 50%, transparent 100%);
   color: white;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 30vh 65vh 5vh;
+  grid-template-areas: "." "form" "footer";
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  grid-area: form;
+}
+
+form h3, form h1 {
+  width: 80vw;
 }
 
 form label {
@@ -243,10 +240,11 @@ form label {
 label input,
 label textarea {
   font-size: 50px;
-  background-color: black;
+  background-color: transparent;
   display: block;
   width: 80vw;
   color: white;
+  border: none;
   border-bottom: 2px solid yellow;
 }
 
@@ -255,16 +253,38 @@ label input {
 }
 
 label textarea {
-  height: 30vh;
+  height: 15vh;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.status {
+  width: 80vw;
+  height: 10vh;
+  color: yellow;
+  font-size: 40px;
 }
 
 .submit {
-  width: 100%;
+  width: 80vw;
+  font-size: 40px;
+  color: black;
   height: 5vh;
+  background-color: yellow;
+  border: 5px solid black;
+}
+
+.submit:focus {
+  outline: none;
 }
 
 footer {
   display: block;
+  grid-area: footer;
+  text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
@@ -277,6 +297,10 @@ footer {
 @media only screen and (min-width: 992px) {
   .navbar a {
     font-size: 15px !important;
+  }
+  .nav a.active {
+    color: white !important;
+    background-color: transparent;
   }
   .nav a::after {
     content: "";
@@ -324,8 +348,8 @@ footer {
   #projects {
     background: black;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 100%;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 100vh;
     grid-template-areas: "n1 n2 n3 n4";
   }
 }

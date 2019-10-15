@@ -1,7 +1,5 @@
 $(document).ready(function() {
   $(".submit").click(function(event) {
-    console.log("clicked");
-
     const email = $(".email").val();
     const message = $(".message").val();
     const status = $(".status");
