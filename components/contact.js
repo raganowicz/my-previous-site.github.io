@@ -1,6 +1,3 @@
-const emailInp = document.getElementById("email");
-const messageInp = document.getElementById("message");
-
 $(document).ready(function() {
   $(".submit").click(function(event) {
     const email = $("#email").val();

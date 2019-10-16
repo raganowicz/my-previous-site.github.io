@@ -213,7 +213,10 @@ html .section h1 {
 #contact {
   background: linear-gradient(to bottom right, black 0%, black 50%, transparent 50%, transparent 100%);
   color: white;
-  display: flex;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 30vh 65vh 5vh;
+  grid-template-areas: "." "form" "footer";
 }
 
 form {
