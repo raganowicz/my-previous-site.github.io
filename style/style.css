@@ -99,8 +99,8 @@ html .section h1 {
   color: white;
   display: grid;
   grid-template-columns: 140px calc(100vw-140px);
-  grid-template-rows: 100vh;
-  grid-template-areas: ". accordion";
+  grid-template-rows: 35vh 65vh;
+  grid-template-areas: ". ." ". accordion";
 }
 
 #accordion {
@@ -211,6 +211,7 @@ html .section h1 {
 }
 
 #contact {
+  height: 100%;
   background: linear-gradient(to bottom right, black 0%, black 50%, transparent 50%, transparent 100%);
   color: white;
   display: grid;

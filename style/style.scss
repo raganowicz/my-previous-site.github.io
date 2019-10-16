@@ -105,8 +105,10 @@ html {
   color: $main-white;
   display: grid;
   grid-template-columns: 140px calc(100vw-140px);
-  grid-template-rows: 100vh;
-  grid-template-areas: ". accordion";
+  grid-template-rows: 35vh 65vh;
+  grid-template-areas: 
+  ". ."
+  ". accordion";
 }
 #accordion {
   grid-area: accordion;
@@ -207,6 +209,7 @@ html {
   }
 }
 #contact {
+  height: 100%;
   background: linear-gradient(
     to bottom right,
     $main-black 0%,
