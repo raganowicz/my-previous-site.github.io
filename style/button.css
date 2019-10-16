@@ -4,9 +4,10 @@
 
 .demo {
   position: relative;
-  padding: 1.5em 1.5em;
+  padding: 30px;
   border: none;
   background-color: transparent;
+  margin-top: 100px;
   cursor: pointer;
   outline: none !important;
   font-size: 45px;
@@ -55,10 +56,10 @@
   background-color: transparent;
   color: white;
   border: 2px solid white;
-  margin-top: 30px;
+  margin: 30px 5px;
   border-radius: 5px;
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
 }
 
 .icon {
