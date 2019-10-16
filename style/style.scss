@@ -105,23 +105,24 @@ html {
   color: $main-white;
   display: grid;
   grid-template-columns: 140px calc(100vw-140px);
-  grid-template-rows: 35vh 65vh;
+  grid-template-rows: 30vh 70vh;
   grid-template-areas: 
   ". ."
   ". accordion";
 }
+.description{
+  display: none;
+}
 #accordion {
+  max-width: 100vw;
   grid-area: accordion;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-end;
   button {
     font-size: 100px;
   }
 }
 .focus {
   margin: 0;
-  font-size: 45px;
+  font-size: 40px;
   .yellow-const {
     color: $yellow-color !important;
   }
@@ -149,7 +150,7 @@ html {
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     transition: all 1s;
     button {

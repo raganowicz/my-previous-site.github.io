@@ -99,11 +99,16 @@ html .section h1 {
   color: white;
   display: grid;
   grid-template-columns: 140px calc(100vw-140px);
-  grid-template-rows: 35vh 65vh;
+  grid-template-rows: 30vh 70vh;
   grid-template-areas: ". ." ". accordion";
 }
 
+.description {
+  display: none;
+}
+
 #accordion {
+  max-width: 100vw;
   grid-area: accordion;
 }
 
@@ -113,7 +118,7 @@ html .section h1 {
 
 .focus {
   margin: 0;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .focus .yellow-const {
@@ -141,7 +146,7 @@ html .section h1 {
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   transition: all 1s;
 }
