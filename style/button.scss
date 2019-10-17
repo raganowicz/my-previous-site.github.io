@@ -4,17 +4,18 @@ $yellow-color: rgb(255, 255, 0);
 .info button:active {
   outline: none;
 }
-
+.info button{
+  font-size: 1em;
+}
 .demo {
   position: relative;
-  padding: 30px;
+  padding: 1em;
   border: none;
   background-color: transparent;
-  margin-top: 100px;
   cursor: pointer;
-  outline: none !important;
-  font-size: 45px;
   color: white;
+  margin-top:10%;
+ 
 }
 // Effect one
 .demo::after,
@@ -52,23 +53,24 @@ $yellow-color: rgb(255, 255, 0);
 }
 .github {
   font-family: Montserrat, sans-serif;
-  font-size: 35px;
+  font-size: 1em;
   background-color: rgba(0, 0, 0, 0);
   color: $main-white;
-  border: 2px solid $main-white;
-  margin:30px 5px;
-  border-radius: 5px;
+  border: 1px solid $main-white;
+  border-radius: 10px;
   display: inline-block;
-  padding: 20px;
+  padding: 0.2em;
+  margin-top:5%;
+  margin-bottom: 5%;
 }
 .icon {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 1.2em;
+  height: 1.2em;
   background-image: url("../images/github.png");
   background-repeat: no-repeat;
-  background-size: 2rem;
-  background-position: 3px 10px;
+  background-size: 1rem;
+  background-position: 0.2em 0.2em;
 }
 .github:hover {
   background-color: $main-white;

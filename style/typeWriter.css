@@ -1,5 +1,5 @@
 .typewrite {
-  margin: 50px;
+  margin: 1em;
   color: white;
   text-transform: uppercase;
   position: relative;
@@ -8,8 +8,8 @@
 
 .typewrite div {
   display: inline-block;
-  height: 10px;
-  border-right: 50px solid rgba(255, 255, 255, 0.836);
+  height: 0.2em;
+  border-right: 0.5em solid rgba(255, 255, 255, 0.836);
   animation: caret 1s steps(1) infinite;
   padding-left: 3px;
 }

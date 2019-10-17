@@ -2,12 +2,17 @@
 <html>
   <head>
     <title>Piotr Raganowicz-Macina portfolio</title>
+    <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro&display=swap">
     <link rel="stylesheet" type="text/css" href="style/style.min.css" />
     <link rel="stylesheet" type="text/css" href="style/typeWriter.min.css" />
     <link rel="stylesheet" type="text/css" href="style/toggler.min.css" />
@@ -49,7 +54,7 @@
 
     <!-- First section - #home -->
     <div id="home" class="section">
-      <video autoplay muted onended="playMovie()" id="myVideo">
+      <video autoplay muted="muted" onended="playMovie()" id="myVideo">
         <source src="video/video1.mp4" type="video/mp4" />
       </video>
       <h1 class="typewrite">
@@ -130,7 +135,7 @@
                     stack:['JavaScript','HTML','CSS','SASS/SCSS','Node.js'],
                     frameworks:['VanillaJS', 'React'], 
                     libraries:['jQuery','Bootstrap'], 
-                    tools:['Visual Studio Code','WebStorm','Github','Postman',
+                    tools:['Visual Studio Code','Github','Postman',
                     'npm', 'Gimp'],
                     languages:['Polish(native)','English(B2+)']
                 </div>
@@ -180,7 +185,7 @@
         </div>
       </div>
       <!-- Picture of myself-->
-      <div id="portrait"></div>
+      <img id="portrait" src="/images/ja.jpg">
     </div>
     <!-- Third section #projects-->
     <div id="projects" class="section">
@@ -232,7 +237,7 @@
     <!-- Fourth section #contact-->
     <div id="contact" class="section">
       <form action="https://formspree.io/piotr.rm95@gmail.com" method="POST">
-        <h3>Can I do something for you?</h3>
+        <h5>If I can do something for you,</h5>
         <h1>Message me:</h1>
         <label>
           <input
@@ -250,7 +255,7 @@
           ></textarea>
         </label>
         <div id="status"></div>
-        <button class="submit" type="submit">Send</button>
+        <button class="submit" type="submit">SEND!</button>
       </form>
       <footer>Copyright by Piotr Raganowicz-Macina 2019</footer>
     </div>
