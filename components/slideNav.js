@@ -1,3 +1,4 @@
+//using a little bit edited:
 /*
  * slide-nav 1.0.1
  * ES6 Vanilla.js navigation plugin to simple use on one-page websites.

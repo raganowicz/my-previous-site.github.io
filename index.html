@@ -2,21 +2,47 @@
 <html>
   <head>
     <title>Piotr Raganowicz-Macina portfolio</title>
-    <meta name="viewport" content="height=device-height, 
+    <meta
+      name="viewport"
+      content="height=device-height, 
                       width=device-width, initial-scale=1.0, 
                       minimum-scale=1.0, maximum-scale=1.0, 
-                      user-scalable=no">
+                      user-scalable=no"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro&display=swap"
+    />
     <link rel="stylesheet" type="text/css" href="style/style.min.css" />
     <link rel="stylesheet" type="text/css" href="style/typeWriter.min.css" />
     <link rel="stylesheet" type="text/css" href="style/toggler.min.css" />
     <link rel="stylesheet" type="text/css" href="style/button.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/38e6e7fe17.js"
+      crossorigin="anonymous"
+      SameSite="none"
+    ></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -94,15 +120,15 @@
                 Developer', location: 'Krakow', };
               </div>
               <div class="description">
-              /* At the beggining of 2019 I decided to start learning
-              programming. Fastly I got hooked on coding, discovered how many
-              opportunities it opens. I'm treating code like an art, I can share
-              with others. I'm still learning and willing to explore new
-              technologies. I'm creative, open-minded and determined to do
-              whatever it is I'm doing. Looking for first full-time job, which
-              would create new challanges, and help me grow with experienced
-              specialists. */
-            </div>
+                /* At the beggining of 2019 I decided to start learning
+                programming. Fastly I got hooked on coding, discovered how many
+                opportunities it opens. I'm treating code like an art, I can
+                share with others. I'm still learning and willing to explore new
+                technologies. I'm creative, open-minded and determined to do
+                whatever it is I'm doing. Looking for first full-time job, which
+                would create new challanges, and help me grow with experienced
+                specialists. */
+              </div>
             </div>
           </div>
         </div>
@@ -131,19 +157,18 @@
             <div class="card-body">
               <div>
                 <div class="focus">
-                  <span class="yellow-const"> const</span> SKILLS = { 
-                    stack:['JavaScript','HTML','CSS','SASS/SCSS','Node.js'],
-                    frameworks:['VanillaJS', 'React'], 
-                    libraries:['jQuery','Bootstrap'], 
-                    tools:['Visual Studio Code','Github','Postman',
-                    'npm', 'Gimp'],
-                    languages:['Polish(native)','English(B2+)']
+                  <span class="yellow-const"> const</span> SKILLS = {
+                  stack:['JavaScript','HTML','CSS','SASS/SCSS','Node.js'],
+                  frameworks:['VanillaJS', 'React'],
+                  libraries:['jQuery','Bootstrap'], tools:['Visual Studio
+                  Code','Github','Postman', 'npm', 'Gimp'],
+                  languages:['Polish(native)','English(B2+)']
                 </div>
                 <div class="description">
-                /*I don't use progress bars because they're too subiective and
-                can't really tell anything about my skills. I still train skills
-                I placed on list. I would be complementing list with new
-                abilities. */
+                  /*I don't use progress bars because they're too subiective and
+                  can't really tell anything about my skills. I still train
+                  skills I placed on list. I would be complementing list with
+                  new abilities. */
                 </div>
               </div>
             </div>
@@ -175,9 +200,9 @@
               <div>
                 <div class="focus">
                   <span class="yellow-const"> const</span> HOBBIES =
-                  [programming, art(generative, performance),theatre, historical
-                  reenactment, indie games, pixel art, music(especially
-                  acoustic), football(especially English),Harry Potter, LEGO!]
+                  [programming, art(generative, performance), theatre, historical
+                  reenactment, indie games, pixel art, music(especially folk), 
+                  football(especially English),Harry Potter, LEGO]
                 </div>
               </div>
             </div>
@@ -185,7 +210,7 @@
         </div>
       </div>
       <!-- Picture of myself-->
-      <img id="portrait" src="/images/ja.jpg">
+      <img id="portrait" src="/images/ja.jpg" />
     </div>
     <!-- Third section #projects-->
     <div id="projects" class="section">
@@ -236,20 +261,27 @@
     </div>
     <!-- Fourth section #contact-->
     <div id="contact" class="section">
+      <div class="nav-black"></div>
       <form action="https://formspree.io/piotr.rm95@gmail.com" method="POST">
-        <h5>If I can do something for you,</h5>
-        <h1>Message me:</h1>
+        <h1>Get in touch with me</h1>
         <label>
           <input
-            placeholder="Your e-mail"
+            placeholder="Your E-mail"
             type="email"
             name="email"
             id="email"
           />
+          <input
+          placeholder="Your Name"
+          type="name"
+          name="name"
+          id="name"
+        />
         </label>
         <label>
           <textarea
-            placeholder="Type your message here"
+            placeholder="Your Message"
+            name="message"
             class="message"
             id="message"
           ></textarea>
@@ -260,13 +292,9 @@
       <footer>Copyright by Piotr Raganowicz-Macina 2019</footer>
     </div>
     <!-- Scripts-->
+    <script src="components/welcome.js" type="text/javascript"></script>
     <script src="components/slideNav.js" type="text/javascript"></script>
     <script src="components/videoController.js" type="text/javascript"></script>
-    <script
-      src="https://kit.fontawesome.com/38e6e7fe17.js"
-      crossorigin="anonymous"
-      SameSite="none"
-    ></script>
     <script src="components/typer.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <script src="components/contact.js" type="text/javascript"></script>
@@ -276,20 +304,5 @@
         changeHash: true
       });
     </script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

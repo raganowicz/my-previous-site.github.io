@@ -1,7 +1,6 @@
 {
-  "name": "slide-nav",
-  "version": "1.0.1",
-  "description": "ES6 Vanilla.js navigation plugin to simple use on one-page websites.",
+  "name": "prm-portfolio",
+  "description": "Piotr Raganowicz-Macina front-end dev website",
   "main": "slideNav.js",
   "dependencies": {
     "gulp-babel": "^6.1.2",
@@ -18,12 +17,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qmixi/slide-nav.git"
+    "url": "git+https://piotrrm95.github.io"
   },
-  "author": "Piotr Kumorek",
+  "author": "Piotr Raganowicz-Macina",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/qmixi/slide-nav/issues"
-  },
-  "homepage": "https://github.com/qmixi/slide-nav"
 }
