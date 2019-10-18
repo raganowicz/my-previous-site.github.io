@@ -216,6 +216,19 @@ html {
 }
 #contact {
   height: 100%;
+  background-color: $main-white;
+  color: $main-black;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 15vh 75vh 10vh;
+  grid-template-areas:
+    "nav-black"
+    "form"
+    "footer";
+}
+.nav-black {
+  grid-area: nav-black;
+  width: 50%;
   background: linear-gradient(
     to bottom right,
     $main-black 0%,
@@ -223,26 +236,17 @@ html {
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0) 100%
   );
-  color: $main-white;
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: 10vh 85vh 5vh;
-  grid-template-areas:
-    "."
-    "form"
-    "footer";
 }
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   grid-area: form;
-  h5 {
-    font-size: 0.8em;
-  }
-  h5,
   h1 {
     width: 80vw;
+    font-family: Montserrat, sans-serif !important;
+    color: $main-black;
   }
 }
 form label {
@@ -253,20 +257,22 @@ label {
   textarea {
     font-size: 1em;
     background-color: rgba(0, 0, 0, 0);
-    display: block;
-    width: 80vw;
-    color: $main-white;
+    font-family: "Courier New", Courier;
+    color: $main-black;
     border: none;
     border-bottom: 2px solid $yellow-color;
   }
   input {
-    height: 5vh;
+    display: inline-block;
+    width: 40vw;
   }
   input:focus {
     background-color: rgba(0, 0, 0, 0);
   }
   textarea {
     height: 20vh;
+    display: block;
+    width: 80vw;
   }
 }
 input:focus,
@@ -277,8 +283,8 @@ textarea:focus {
   font-family: "Courier";
   width: 80vw;
   height: 10vh;
-  color: $yellow-color;
-  font-size: 1em;
+  color: $main-black;
+  font-size: 0.8em;
 }
 .submit {
   width: 80vw;
@@ -287,6 +293,7 @@ textarea:focus {
   height: 2em;
   background-color: $yellow-color;
   margin-top: 2%;
+  margin-bottom: 2%;
   position: relative;
   border: none;
 }
@@ -301,9 +308,6 @@ textarea:focus {
   border: 1px solid $main-black;
   z-index: 3;
 }
-.submit:hover {
-  background-color: $main-white;
-}
 .submit:hover::after {
   top: 5px;
   left: -5px;
@@ -316,6 +320,21 @@ footer {
   grid-area: footer;
   text-align: center;
   font-size: 0.5em;
+}
+footer::after{
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 3;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(
+    to top left,
+    $main-black 0%,
+    $main-black 50%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 @media screen and (min-width: 600px) {
@@ -412,29 +431,44 @@ footer {
   #contact {
     height: 100%;
     grid-template-columns: 100vw;
-    grid-template-rows: 25vh 70vh 5vh;
+    grid-template-rows: 10vh 85vh 5vh;
     grid-template-areas:
-      "."
+      "nav-black"
       "form"
       "footer";
+  }
+  .nav-black {
+    width: 100%;
+    background-color: $main-black;
   }
   label {
     input,
     textarea {
       font-size: 1.2em;
     }
-    textarea{
+    textarea {
       height: 30vh;
     }
   }
-  .submit{
-    width:50%;
+  form{
+    input{
+      width: 25vw;
+    }
+    h1, textarea, .submit, #status{
+      width: 50vw;
+    }
+  }
+  .submit {
     height: 10%;
   }
-  #status{
+  #status {
     height: 2vh;
+    font-size: 1em;
   }
   footer {
     font-size: 15px;
+  }
+  footer::after{
+    display: none;
   }
 }
