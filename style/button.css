@@ -1,4 +1,4 @@
-.info button:active {
+.info button:active, .info button:focus {
   outline: none;
 }
 
