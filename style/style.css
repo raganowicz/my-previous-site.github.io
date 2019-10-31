@@ -157,7 +157,6 @@ html .section h1 {
 }
 
 #projects .project {
-  background-attachment: fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -206,7 +205,7 @@ html .section h1 {
 
 #projects .n1 {
   background-image: url("../images/proj1.jpg");
-  background-position: center top;
+  background-position: left;
   grid-area: n1;
 }
 
