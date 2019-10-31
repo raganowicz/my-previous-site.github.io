@@ -155,7 +155,7 @@ html {
     "n1 n2"
     "n3 n4";
   .project {
-    background-attachment: fixed;
+    // background-attachment: fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -197,7 +197,7 @@ html {
   }
   .n1 {
     background-image: url("../images/proj1.jpg");
-    background-position: center top;
+    background-position: left;
     grid-area: n1;
   }
   .n2 {
